@@ -12,132 +12,227 @@ class Teacher extends StatelessWidget {
           child: Column(
             children: [
               Align(
-                alignment: Alignment.topLeft,
+                alignment: Alignment.topRight,
                 child: GestureDetector(
-                  onTap: () => Navigator.pop(context),
+                  // onTap: () => Navigator.pop(context),
                   child: Icon(
-                    Icons.arrow_back,
+                    Icons.arrow_forward,
                     size: 32,
                     color: Colors.black54,
                   ),
                 ),
               ),
-              SizedBox(
-                height: 18,
-              ),
               Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 227, 207, 201),
-                  shape: BoxShape.circle,
-                ),
-                child: Image.asset(
-                  'assets/images/masti.png',
+                padding: EdgeInsets.fromLTRB(0, 0, 2.5, 0),
+                alignment: Alignment.topRight,
+                height: 30.0,
+                width: MediaQuery.of(context).size.width,
+                color: Color.fromARGB(255, 249, 239, 238),
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
+              // SizedBox(
+              //   height: 18,
+              // ),
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   decoration: BoxDecoration(
+              //     color: Color.fromARGB(255, 227, 207, 201),
+              //     shape: BoxShape.circle,
+              //   ),
+              //   child: Image.asset(
+              //     'assets/images/masti.png',
+              //   ),
+              // ),
               SizedBox(
-                height: 24,
+                height: 20,
               ),
               Text(
-                'Verification',
+                'Questionnaire',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Enter your OTP code number",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black38,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                height: 28,
+                height: 20,
               ),
               Container(
-                padding: EdgeInsets.all(28),
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(22),
                 ),
                 child: Column(
                   children: [
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     _textFieldOTP(first: true, last: false),
-                    //     _textFieldOTP(first: false, last: false),
-                    //     _textFieldOTP(first: false, last: false),
-                    //     _textFieldOTP(first: false, last: true),
-                    //   ],
-                    // ),
-                    SizedBox(
-                      height: 22,
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => Teacher()),
-                          );
-                        },
-                        style: ButtonStyle(
-                          foregroundColor: MaterialStateProperty.all<Color>(
-                              Color.fromARGB(250, 164, 112, 90)),
-                          backgroundColor: MaterialStateProperty.all<Color>(
-                            Color.fromARGB(255, 227, 207, 201),
-                          ),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24.0),
-                            ),
-                          ),
+                    TextFormField(
+                      showCursor: true,
+                      keyboardType: TextInputType.text,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                      decoration: InputDecoration(
+                        labelText: "Teacher Name",
+                        labelStyle:
+                            TextStyle(color: Color.fromARGB(250, 164, 112, 90)),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Padding(
-                          padding: EdgeInsets.all(14.0),
-                          child: Text(
-                            'Verify',
-                            style: TextStyle(fontSize: 16),
-                          ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextFormField(
+                      showCursor: true,
+                      keyboardType: TextInputType.text,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                      decoration: InputDecoration(
+                        labelText: "School Name",
+                        labelStyle:
+                            TextStyle(color: Color.fromARGB(250, 164, 112, 90)),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextFormField(
+                      showCursor: true,
+                      keyboardType: TextInputType.text,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                      decoration: InputDecoration(
+                        labelText: "Enter City",
+                        labelStyle:
+                            TextStyle(color: Color.fromARGB(250, 164, 112, 90)),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black12),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-              ),
-              SizedBox(
-                height: 18,
-              ),
-              Text(
-                "Didn't you receive any code?",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black38,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                height: 18,
-              ),
-              Text(
-                "Resend New Code",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              )
+              // Text(
+              //   "Enter your OTP code number",
+              //   style: TextStyle(
+              //     fontSize: 14,
+              //     fontWeight: FontWeight.bold,
+              //     color: Colors.black38,
+              //   ),
+              //   textAlign: TextAlign.center,
+              // ),
+              // SizedBox(
+              //   height: 28,
+              // ),
+              // Container(
+              //   padding: EdgeInsets.all(28),
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius: BorderRadius.circular(22),
+              //   ),
+              //   child: Column(
+              //     children: [
+              //       // Row(
+              //       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //       //   children: [
+              //       //     _textFieldOTP(first: true, last: false),
+              //       //     _textFieldOTP(first: false, last: false),
+              //       //     _textFieldOTP(first: false, last: false),
+              //       //     _textFieldOTP(first: false, last: true),
+              //       //   ],
+              //       // ),
+              //       SizedBox(
+              //         height: 22,
+              //       ),
+              //       SizedBox(
+              //         width: double.infinity,
+              //         child: ElevatedButton(
+              //           onPressed: () {
+              //             Navigator.of(context).push(
+              //               MaterialPageRoute(builder: (context) => Teacher()),
+              //             );
+              //           },
+              //           style: ButtonStyle(
+              //             foregroundColor: MaterialStateProperty.all<Color>(
+              //                 Color.fromARGB(250, 164, 112, 90)),
+              //             backgroundColor: MaterialStateProperty.all<Color>(
+              //               Color.fromARGB(255, 227, 207, 201),
+              //             ),
+              //             shape:
+              //                 MaterialStateProperty.all<RoundedRectangleBorder>(
+              //               RoundedRectangleBorder(
+              //                 borderRadius: BorderRadius.circular(24.0),
+              //               ),
+              //             ),
+              //           ),
+              //           child: Padding(
+              //             padding: EdgeInsets.all(14.0),
+              //             child: Text(
+              //               'Verify',
+              //               style: TextStyle(fontSize: 16),
+              //             ),
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 18,
+              // ),
+              // Text(
+              //   "Didn't you receive any code?",
+              //   style: TextStyle(
+              //     fontSize: 14,
+              //     fontWeight: FontWeight.bold,
+              //     color: Colors.black38,
+              //   ),
+              //   textAlign: TextAlign.center,
+              // ),
+              // SizedBox(
+              //   height: 18,
+              // ),
+              // Text(
+              //   "Resend New Code",
+              //   style: TextStyle(
+              //     fontSize: 18,
+              //     fontWeight: FontWeight.bold,
+              //     color: Colors.black,
+              //   ),
+              //   textAlign: TextAlign.center,
+              // ),
             ],
           ),
         ),
