@@ -8,35 +8,20 @@ class Teacher extends StatelessWidget {
       backgroundColor: Color.fromARGB(255, 249, 239, 238),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 32),
           child: Column(
             children: [
               Align(
                 alignment: Alignment.topRight,
                 child: GestureDetector(
                   // onTap: () => Navigator.pop(context),
-                  child: Icon(
-                    Icons.arrow_forward,
-                    size: 32,
-                    color: Colors.black54,
-                  ),
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(0, 0, 2.5, 0),
-                alignment: Alignment.topRight,
-                height: 30.0,
-                width: MediaQuery.of(context).size.width,
-                color: Color.fromARGB(255, 249, 239, 238),
-                child: Align(
-                  alignment: Alignment.topRight,
                   child: Text(
                     "Skip",
-                    style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold),
+                    style: TextStyle(color: Colors.black54, fontSize: 20),
                   ),
                 ),
               ),
+
               // SizedBox(
               //   height: 18,
               // ),
@@ -55,7 +40,7 @@ class Teacher extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                'Questionnaire',
+                'Please help us more!',
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,

@@ -43,6 +43,19 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20.0, //to insert space instead of doing padding
               ),
               Container(
+                padding: EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      "Skip",
+                      style: TextStyle(color: Colors.black54, fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
                 width: 200,
                 height: 200,
                 decoration: BoxDecoration(
